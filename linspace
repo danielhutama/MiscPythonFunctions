@@ -1,0 +1,15 @@
+# function to create a linspace with user-defined start and stop points
+
+def linspace(start, end, numpoints):
+    points = [start]
+    numpoints = int(numpoints)
+    if numpoints==1:
+        points.append(end)
+        return points
+    else:
+        step = (end-start)/(numpoints)
+        for i in range(1,numpoints+1):
+            points.append(start+step*i)
+    return points
+        
+linspace(0, 1, 10)
